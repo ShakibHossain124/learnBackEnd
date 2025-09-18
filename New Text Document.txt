@@ -1,0 +1,2 @@
+npm init -> create package.json file
+node --watch-path=src --watch src/server.js -> usig watch flag
