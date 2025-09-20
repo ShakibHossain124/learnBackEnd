@@ -2,6 +2,8 @@ import http from 'http'
 import fs from 'fs'
 import path from 'path'
 
+const PORT = process.env.PORT
+
 const server = http.createServer((req,res)=>{
     const filePath = path.join(process.cwd(),"src/index.html")
     fs.readFile(filePath, (err,data)=>{
@@ -18,4 +20,4 @@ const server = http.createServer((req,res)=>{
     
 })
 
-server.listen(8000, ()=> console.log("Server is running on port 8000"))
+server.listen(PORT, ()=> console.log(`Server is running on port ${PORT}`))
